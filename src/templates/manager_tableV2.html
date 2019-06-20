@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class = "jumbotron">
+<div>
+    <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:5px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:5px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+    <table class = "table table-striped" border = 2 width="1000">
+    {% for row in items %}
+    <tr>
+      <td>{{ row[0]|tojson|safe }}</td>
+      <td>{{ row[1] }}</td>
+        {% endfor %}
+    </tr>
+    </table>
+</div>
+</div>
+{% endblock %}

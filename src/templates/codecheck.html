@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class = "jumbotron container">
+    <h3>Please provide your verification code</h3>
+<div class="container page-form">
+<form class = "form-inline" action="/codecheck" method="post">
+<div class="form-group mx-sm-3 mb-2">
+    <label for="code" class="sr-only">Code</label>
+    <input type="password" class="form-control" id="code" placeholder="Code" name="code">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Verify</button>
+</form>
+</div>
+</div>
+
+
+{% endblock %}

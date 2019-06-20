@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class = "jumbotron">
+<div class = "container">
+
+        <h2> Name: {{ name }}</h2>
+        <hr>
+        <h2> Manager: {{ manager }}</h2>
+        <hr>
+        <h2> Holidays: {{ holidays }}</h2>
+        <hr>
+        <h2> Holiday_Requested: {{ holiday_requested }}</h2>
+        <hr>
+
+</div>
+
+
+<form action="/logout" method="post">
+<input type="submit" id="logout_btn" name="" value="Logout" style="position:absolute;left:1400px;top:10px;width:96px;height:25px;z-index:0;">
+</form>
+
+        <form action="/update/info" method="post">
+        <button name="/update/info" type="submit" class="btn btn-primary btn-lg" style="position:absolute;left:1300px;top:50px;width:200px;height:35px;z-index:0;">Update Info</button>
+
+</form>
+</div>
+{% endblock %}

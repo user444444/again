@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<div class = "jumbotron">
+<div>
+    <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:5px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:5px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+
+<table class = "tg" border = 2 width="1000">
+{% for item in items %}
+    {% for key,val in item.items() %}
+    <TR>
+
+    <th> {{key }}</th>
+    <td>{{val }}</td>
+
+
+
+
+    </TR>
+    {%endfor %}
+
+    {%endfor %}
+
+
+</table>
+</div>
+<div>
+<form action="/req" method="post">
+        <button name="Holiday" type="submit" class="btn btn-primary btn-lg" style="position:absolute;left:1300px;top:50px;width:200px;height:35px;z-index:0;">Request Time Off</button>
+
+</form>
+    <form action="/manager_table" method="post">
+        <button name="Manager Table" type="submit" class="btn btn-primary btn-lg" style="position:absolute;left:1300px;top:100px;width:200px;height:35px;z-index:0;">Manager Table</button>
+
+</form>
+    <form action="/man_info" method="post">
+        <button name="Manager_Info" style="position:absolute;left:1290px;top:10px;width:100px;height:25px;z-index:0;" class ="btn btn-info" type="submit">Manager Info</button>
+</form>
+
+<form id = "package_form" action="auth_rej" method = "post">
+    <div class="form-group">
+            <label for="emp_email">Employee Email</label>
+            <input type = "text" id="emp_email" class="form-control" name="emp_email">
+</div>
+
+    <div class="panel-body">
+          <input type ="submit" class = "btn btn-success"  name="action" value="Authorise">
+          <input type ="submit" class = "btn btn-dark" name="action" value="Reject">
+      </div>
+
+
+</form>
+
+    <form action="/logout" method="post">
+<input type="submit" id="logout_btn" name="" value="Logout" style="position:absolute;left:1400px;top:10px;width:96px;height:25px;z-index:0;">
+</form>
+</div>
+
+{% endblock %}
+
+
+

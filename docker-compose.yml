@@ -1,0 +1,21 @@
+version: '3'
+services:
+  db:
+    image: mongo:3.0.2
+    restart: always
+    volumes:
+      - "dbdata:/var/lib/posgressql/data"
+
+
+
+  #web:
+   # build:  .
+    #ports:
+     # - '5000:5000'
+    #volumes:
+     # - .:/time_off
+    #tty: true
+  #db:
+   # image: mongo:3.0.2
+
+
